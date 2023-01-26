@@ -9,10 +9,5 @@
     <PackageReference Include="MediatR" Version="11.1.0" />
     <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="7.0.0" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Events\" />
-    <Folder Include="Exceptions\" />
-    <Folder Include="ValueObjects\" />
-  </ItemGroup>
 
 </Project>

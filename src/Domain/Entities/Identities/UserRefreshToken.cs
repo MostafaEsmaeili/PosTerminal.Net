@@ -1,16 +1,21 @@
 ﻿
 namespace PosTerminal.Net.Domain.Entities.Identities;
 
-public class UserRefreshToken : BaseAuditableEntity
+public class UserRefreshToken : BaseEntity<Guid>
 {
-    public Guid Id { get; set; }
-    public UserRefreshToken()
+    private UserRefreshToken(Guid id,
+                             int userId,
+                             bool isValid) : base(id)
     {
+        Id = id;
         CreatedAt = DateTime.Now;
     }
-
-    public int UserId { get; set; }
-    public User User { get; set; }
-    public DateTime CreatedAt { get; set; }
-    public bool IsValid { get; set; }
+    public static UserRefreshToken CreateNew(int userId)
+    {
+        return new(Guid.NewGuid(), userId, true);
+    }
+    public int UserId { get; }
+    public User User { get; } = null!;
+    public DateTime CreatedAt { get; }
+    public bool IsValid { get; }
 }
