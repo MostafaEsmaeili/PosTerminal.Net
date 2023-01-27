@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using PosTerminal.Net.Domain.PosTerminalAggregate;
 
 namespace PosTerminal.Net.Domain.Entities.Identities;
 
@@ -18,7 +17,6 @@ public class User : IdentityUser<int>
     public ICollection<UserLogin> Logins { get; set; }
     public ICollection<UserClaim> Claims { get; set; }
     public ICollection<UserToken> Tokens { get; set; }
-    public ICollection<UserRefreshToken> UserRefreshTokens { get; set; }
     public ICollection<Pos> Pos { get; } = new HashSet<Pos>();
     #region Navigation Properties
 

@@ -1,5 +1,5 @@
 # Remote POS Terminal Access
-
+## after fitrst version, I'm going to refactor this repo and after that you can use it on your app. For now it's under heavy development.
 This repository contains a project that allows for remote access to a local POS terminal using .NET Core. The project utilizes the power of the .NET Core framework to create a secure and reliable connection between the POS terminal and a remote device. The project also includes features such as:
 
 - Encryption to ensure sensitive data is protected.
