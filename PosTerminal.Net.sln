@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PosTerminal.Net.Domain.Test
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PosTerminal.Net.Application", "src\Application\PosTerminal.Net.Application.csproj", "{D1716584-2C5F-43BD-9D61-50AC9D2F2C63}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PosTerminal.Net.Utils", "src\Utils\PosTerminal.Net.Utils.csproj", "{17CEF658-878A-408E-9D1C-5B9F15CB2190}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{D1716584-2C5F-43BD-9D61-50AC9D2F2C63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1716584-2C5F-43BD-9D61-50AC9D2F2C63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1716584-2C5F-43BD-9D61-50AC9D2F2C63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17CEF658-878A-408E-9D1C-5B9F15CB2190}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17CEF658-878A-408E-9D1C-5B9F15CB2190}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17CEF658-878A-408E-9D1C-5B9F15CB2190}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17CEF658-878A-408E-9D1C-5B9F15CB2190}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
