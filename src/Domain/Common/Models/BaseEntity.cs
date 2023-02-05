@@ -1,15 +1,22 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PosTerminal.Net.Domain.Common.Models;
+public interface ITimeModification
+{
+    DateTime Created { get; set; }
 
-public abstract class BaseEntity<TId> : IEquatable<BaseEntity<TId>>
+    string? CreatedBy { get; set; }
+
+    DateTime? LastModified { get; set; }
+
+    string? LastModifiedBy { get; set; }
+}
+public abstract class BaseEntity<TId> : IEquatable<BaseEntity<TId>>, ITimeModification
     where TId : notnull
 {
-    public virtual TId Id { get; protected set; }
-    protected BaseEntity(TId id)
-    {
-        Id = id;
-    }
+    public  virtual TId Id { get; set; }
+
+
     public override bool Equals(object? obj)
     {
         return obj is BaseEntity<TId> entity && Id.Equals(entity.Id);

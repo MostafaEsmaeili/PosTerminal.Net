@@ -1,14 +1,23 @@
 ﻿using PosTerminal.Net.Domain.Entities.Identities;
+using System.Net.Http.Headers;
 
 namespace PosTerminal.Net.Domain.Entities;
-public class Pos
+public class Pos : BaseEntity<int>
 {
-    public int Id { get; set; }
+    public Pos(int terminalId, Bank bank)
+    {
+        TerminalId = terminalId;
+        Bank = bank;
+        Id= 0;
+        IsActive = true;
+    }
+
     public int TerminalId { get; set; }
     public Bank Bank { get; set; }
     public bool IsActive { get; set; }
     public string? Description { get; set; }
-    public ICollection<User> Users { get; } = new List<User>();
+    public int UserId { get;set;}
+    public User User { get; } = new User();
     public ICollection<PosTransaction> PosTransactions { get; set; }
                         = new List<PosTransaction>();
 }

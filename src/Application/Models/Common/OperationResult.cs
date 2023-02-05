@@ -12,7 +12,10 @@ public class OperationResult<TResult>
     {
         return new OperationResult<TResult> { Result = result, IsSuccess = true };
     }
-
+    public static implicit operator OperationResult<TResult>(TResult result)
+    {
+        return SuccessResult(result);
+    }
     public static OperationResult<TResult> FailureResult(string message, TResult result = default)
     {
         return new OperationResult<TResult> { Result = result, ErrorMessage = message, IsSuccess = false };
