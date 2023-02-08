@@ -20,7 +20,6 @@ public class User : IdentityUser<int>
     public ICollection<Pos> Pos { get; } = new HashSet<Pos>();
     #region Navigation Properties
 
-
     #endregion
 
     public void AddPose(Pos pos)

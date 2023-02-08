@@ -8,16 +8,15 @@ public class Pos : BaseEntity<int>
     {
         TerminalId = terminalId;
         Bank = bank;
-        Id= 0;
+        Id = 0;
         IsActive = true;
     }
-
     public int TerminalId { get; set; }
     public Bank Bank { get; set; }
     public bool IsActive { get; set; }
     public string? Description { get; set; }
-    public int UserId { get;set;}
-    public User User { get; } = new User();
+    public int? UserId { get; set; }
+    public User? User { get; }
     public ICollection<PosTransaction> PosTransactions { get; set; }
                         = new List<PosTransaction>();
 }
