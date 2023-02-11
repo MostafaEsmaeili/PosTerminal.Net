@@ -4,6 +4,9 @@ using System.Net.Http.Headers;
 namespace PosTerminal.Net.Domain.Entities;
 public class Pos : BaseEntity<int>
 {
+    private Pos()
+    {
+    }
     public Pos(int terminalId, Bank bank)
     {
         TerminalId = terminalId;
@@ -16,7 +19,7 @@ public class Pos : BaseEntity<int>
     public bool IsActive { get; set; }
     public string? Description { get; set; }
     public int? UserId { get; set; }
-    public User? User { get; }
+    public User User { get; } = null!;
     public ICollection<PosTransaction> PosTransactions { get; set; }
                         = new List<PosTransaction>();
 }

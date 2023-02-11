@@ -19,7 +19,6 @@
 
   <ItemGroup>
     <Folder Include="Features\PointOfSale\Commands\AssingPosToU\" />
-    <Folder Include="Features\PosTransactions\Commands\" />
   </ItemGroup>
 
 </Project>
